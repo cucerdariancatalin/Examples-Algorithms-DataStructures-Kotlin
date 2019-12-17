@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="80dp"
+    android:orientation="vertical"
+    tools:context=".kotlin.CoRoutinesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/delay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/update_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Suspending using delay.....waiting" />
+
+        <TextView
+            android:id="@+id/update_text_reset_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Reset" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dispatchers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delay_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/update_dispatcher_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suspending using dispatcher....waiting" />
+
+        <TextView
+            android:id="@+id/update_dispatcher_text_reset_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Reset" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/async_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dispatchers_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/async_one_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Suspending using async1" />
+
+        <TextView
+            android:id="@+id/async_two_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            android:text="Suspending using async2" />
+
+        <TextView
+            android:id="@+id/async_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="Async result waiting....." />
+
+
+        <TextView
+            android:id="@+id/async_two_text_reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Reset async" />
+
+        <TextView
+            android:id="@+id/async_measure_text_reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Reset async in measure" />
+    </LinearLayout>
+</RelativeLayout>
